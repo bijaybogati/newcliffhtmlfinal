@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 <style>@-ms-viewport { width: device-width; }</style>
-<link rel="stylesheet" href="//www.marzipano.net/demos/common/reset.css">
-<link rel="stylesheet" href="//www.marzipano.net/demos/common/hint.css">
+<link rel="stylesheet" href="360/vendor/reset.css">
 <link rel="stylesheet" href="360/style.css">
 
     
@@ -30,7 +29,7 @@
 
 </head>
 
-<body class="home page-template-default page page-id-5225 gdlr-core-body tourmaster-body traveltour-body traveltour-body-front traveltour-full  traveltour-with-sticky-navigation gdlr-core-link-to-lightbox">
+<body class="home page-template-default page page-id-5225 gdlr-core-body tourmaster-body traveltour-body traveltour-body-front multiple-scenes view-control-buttons traveltour-full  traveltour-with-sticky-navigation gdlr-core-link-to-lightbox">
     <div class="traveltour-mobile-header-wrap">
         <div class="traveltour-mobile-header traveltour-header-background traveltour-style-slide" id="traveltour-mobile-header">
             <div class="traveltour-mobile-header-container traveltour-container">
@@ -59,13 +58,12 @@
         </div>
     </div>
 
-    <div class="traveltour-body-outer-wrapper ">
-        <div class="traveltour-body-wrapper clearfix  traveltour-with-frame">
+    <div class="traveltour-body-outer-wrapper " style=" margin: 8px; ">
+        <div class="traveltour-body-wrapper clearfix  traveltour-with-frame ">
             <header class="traveltour-header-wrap traveltour-header-style-plain  traveltour-style-menu-right traveltour-sticky-navigation traveltour-style-fixed">
-                <div class="traveltour-header-background"></div>
-                <div class="traveltour-header-container  traveltour-container">
+                <div class="traveltour-header-container  traveltour-container ">
 
-                    <div class="traveltour-header-container-inner clearfix">
+                    <div class="traveltour-header-container-inner clearfix" >
                         <div class="traveltour-logo  traveltour-item-pdlr">
                             <div class="traveltour-logo-inner">
                                 <a href="index.html">
@@ -96,6 +94,7 @@
                     <!-- traveltour-header-inner -->
                 </div>
                 <!-- traveltour-header-container -->
+            </div>
             </header>
             <!-- header -->
 
@@ -110,72 +109,14 @@
 <!-- Base viewer. -->
 <div id="pano"></div>
 
-<script src="360/marzipano.js" ></script>
+
+<script src="360/vendor/marzipano.js" ></script>
+<script src="360/data.js"></script>
 <script src="360/index.js"></script>
 
 
- <div id="expand">
-                   <img src="360/img/swing.jpg" class="swing-img" width="140px" height="140px">
-                    <h3>Swing</h3>
-                  </div> 
-                        
-                      <div id="reveal">
-                        <img src="360/img/resort.jpg" class="" width="140px" height="140px">
-                         <h3>Resort</h3>
-                      </div>                     
-                </div>
-
-        <div id="info">
-       <div class="icon_wrapper">
-        <div class="icon">
-          
-            <img class="image" src="360/img/bungee.jpg" width="140px" height="140px">
-                          <h3>Bungee</h3>
-         
-       </div>
-  </div>
-</div>
-
-
-<script type="text/javascript">
-
-// Create viewer.
-var viewer = new Marzipano.Viewer(document.getElementById('pano'));
-
-var source = Marzipano.ImageUrlSource.fromString(
-  "",
-  { cubeMapPreviewUrl: "{{MEDIA_URL}}{{cover_photo.4.thumbnail.image}}"  });
-
-// Create geometry.
-var geometry = new Marzipano.CubeGeometry([
-    { tileSize: 256, size: 256, fallbackOnly: true },
-    { size: 512, tileSize: 512 },
-    { size: 1024, tileSize: 512 },
-    { size: 2048, tileSize: 512 }
-]);
-
-// Create view.
-var limiter = Marzipano.RectilinearView.limit.traditional(2048, 120*Math.PI/180);
-var view = new Marzipano.RectilinearView(null, limiter);
-
-// Create scene.
-var scene = viewer.createScene({
-  source: source,
-  geometry: geometry,
-  view: view,
-  pinFirstLevel: true
-});
-
-// Display scene.
-scene.switchTo({ transitionDuration: 0 });
-</script>
- 
-</script>
-
-
-
-
-
+<script src="360/vendor/screenfull.js" ></script>
+<script src="360/vendor/bowser.js" ></script>
 
 
 
