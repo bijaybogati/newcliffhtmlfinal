@@ -23,7 +23,7 @@ $config['successMessage'] = 'Your message has been sent, thank you.';
  * Whether or not to send the notification email. You may wish to disable this if you are
  * saving the form data to the database for example. true or false
  */
-$config['email'] = true;
+$config['email'] = false;
 
 /**
  * Configure the recipients of the notification email message.  For a single
