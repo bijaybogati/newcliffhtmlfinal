@@ -5,7 +5,7 @@
  * your form. It's useful to have this enabled while developing your form, but
  * you should set this to false on production sites.
  */
-define('QUFORM_DEBUG', true);
+define('QUFORM_DEBUG', false);
 
 /** DO NOT CHANGE THESE 2 LINES **/
 define('QUFORM_ROOT', realpath(dirname(__FILE__)));
@@ -39,7 +39,7 @@ $config['email'] = true;
  *     'recipient2@example.com'
  * );
  */
-$config['recipients'] = 'test@gtest.com';
+$config['recipients'] = 'info@thecliffnepal.com';
 
 /**
  * Set the "From" address of the emails. You should set this to the contact
@@ -59,7 +59,7 @@ $config['recipients'] = 'test@gtest.com';
  *
  * $config['from'] = '%email%';
  */
-$config['from'] = '';
+$config['from'] = 'info@thecliffnepal.com';
 
 /**
  * The subject of the notification email message. %first_name% will be replaced
@@ -86,7 +86,7 @@ $config['showEmptyFields'] = false;
 /**
  * Whether or not to send an autoreply email. true or false
  */
-$config['autoreply'] = false;
+$config['autoreply'] = true;
 
 /**
  * Sets the autoreply recipient to the email address submitted to the email field
@@ -107,7 +107,7 @@ $config['autoreplySubject'] = 'Thanks for your message, %name%';
  * Set the "From" address of the autoreply email.
  * See the comment at the $config['from'] setting for options.
  */
-$config['autoreplyFrom'] = '';
+$config['autoreplyFrom'] = 'info@thecliffnepal.com';
 
 /**
  * The file containing the HTML body of the autoreply email
@@ -161,11 +161,11 @@ $config['uploadUrl'] = '';
  * encryption - SMTP encryption (e.g. ssl or tls)
  */
 $config['smtp'] = array(
-    'host' => '',
+    'host' => 'us2.smtp.mailhostbox.com',
     'port' => 25,
-    'username' => '',
-    'password' => '',
-    'encryption' => ''
+    'username' => 'info@thecliffnepal.com',
+    'password' => 'vOKwuLHu4',
+    'encryption' => 'ssl'
 );
 
 // Add the visitor IP to the email
