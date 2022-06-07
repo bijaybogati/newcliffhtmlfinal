@@ -161,10 +161,10 @@ $config['uploadUrl'] = '';
  * encryption - SMTP encryption (e.g. ssl or tls)
  */
 $config['smtp'] = array(
-    'host' => 'us2.smtp.mailhostbox.com',
+    'host' => '',
     'port' => 25,
-    'username' => 'info@thecliffnepal.com',
-    'password' => 'vOKwuLHu4',
+    'username' => '',
+    'password' => '',
     'encryption' => 'ssl'
 );
 
