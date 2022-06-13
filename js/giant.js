@@ -15,4 +15,4 @@
  */
 'use strict';
 
-scene.hotspotContainer().createHotspot(document.querySelector("#expand"), { yaw: -0.04349974476469498, pitch: 0.13099674110035409 });
+scene.hotspotContainer().createHotspot(document.querySelector("#expand3"), { yaw: -1.5262877073729086, pitch:  0.2961506697547325 });

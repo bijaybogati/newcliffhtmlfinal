@@ -15,8 +15,29 @@
  */
 'use strict';
 
+
+
+
+
 // Create viewer.
 var viewer = new Marzipano.Viewer(document.getElementById('pano'));
+
+var autorotate = Marzipano.autorotate({
+  yawSpeed: 0.1,         // Yaw rotation speed
+  targetPitch: 0,        // Pitch value to converge to
+  targetFov: Math.PI/2   // Fov value to converge to
+});
+
+// Autorotate will start after 3s of idle time
+viewer.setIdleMovement(3000, autorotate);  
+// Disable idle movement
+// viewer.setIdleMovement(Infinity);
+
+// Start autorotation immediately
+// viewer.startMovement(autorotate); 
+// Stop any ongoing automatic movement
+// viewer.stopMovement();
+
 
 // Create source.
 var source = Marzipano.ImageUrlSource.fromString(
@@ -35,6 +56,11 @@ var geometry = new Marzipano.CubeGeometry([
 var limiter = Marzipano.RectilinearView.limit.traditional(2048, 120*Math.PI/180);
 var view = new Marzipano.RectilinearView(null, limiter);
 
+
+
+
+
+
 // Create scene.
 var scene = viewer.createScene({
   source: source,
@@ -42,6 +68,8 @@ var scene = viewer.createScene({
   view: view,
   pinFirstLevel: true
 });
+
+
 
 // Display scene.
 scene.switchTo({ transitionDuration: 0 });

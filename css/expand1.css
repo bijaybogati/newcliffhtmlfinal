@@ -1,4 +1,4 @@
-#expand {
+#expand1 {
   width: 70px;
   height: 70px;
   margin-left: -35px;
@@ -15,7 +15,7 @@
               margin .3s ease-in-out;
 }
 
-#expand::after {
+#expand1::after {
   content: '';
   position: absolute;
   width: 0;
@@ -32,33 +32,33 @@
               top .3s ease-in-out;
 }
 
-#expand .title {
+#expand1 .title {
   line-height: 66px;
 }
 
-#expand .icon,
-#expand p {
+#expand1 .icon,
+#expand1 p {
   opacity: 0;
   pointer-events: none;
 }
 
-#expand .icon {
+/*#expand1 .icon {
   width: 0;
   height: 0;
   margin-top: auto;
   transition: all .3s ease-in-out;
 }
 
-/*#expand p {
+#expand1 p {
   width: 90%;
   margin: auto;
   font-style: italic;
   font-size: 12px;
   margin-top: 10px;
   transition: opacity .2s ease-in-out;
-}*/
+}
 
-/*#expand:hover {
+#expand1:hover {
   width: 200px;
   height: 200px;
   margin-top: -200px;
@@ -66,20 +66,20 @@
   background-color: #222;
   color: #fff;
   z-index: 2;
-}*/
+}
 
-/*#expand:hover .icon {
+#expand1:hover .icon {
   width: 50px;
   height: 50px;
   opacity: 1;
-}*/
-/*
-#expand:hover p {
+}
+
+#expand1:hover p {
   opacity: 1;
   transition: opacity .3s ease-in-out .3s;
-}*/
+}
 
-/*#expand:hover::after {
+#expand1:hover::after {
   border-top-color: transparent;
   border-width: 0;
   left: 95px;
